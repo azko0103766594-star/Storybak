@@ -389,3 +389,130 @@ a{
   max-width:95%;
   max-height:95%;
 }
+
+/* =========================
+   🌨️ ENVIRONNEMENTS
+========================= */
+
+/* ❄️ NEIGE */
+
+body.environment-snow {
+  background:
+    radial-gradient(circle at 50% 20%, #315b91, #071426 55%, #02050a);
+}
+
+/* 🧊 GLACE */
+
+body.environment-ice {
+  background:
+    radial-gradient(circle at 50% 20%, #8bdcff, #174f75 45%, #06131e);
+}
+
+/* 🌲 FORÊT */
+
+body.environment-forest {
+  background:
+    radial-gradient(circle at 50% 20%, #28623b, #082415 55%, #020b05);
+}
+
+/* 🌧️ PLUIE */
+
+body.environment-rain {
+  background:
+    linear-gradient(#152b3e, #06131c 65%, #020608);
+}
+
+/* ☀️ SOLEIL */
+
+body.environment-sun {
+  background:
+    radial-gradient(circle at 50% 15%, #ffe477, #e87928 40%, #4c1b38 100%);
+}
+
+/* 🌅 COUCHER DE SOLEIL */
+
+body.environment-sunset {
+  background:
+    linear-gradient(
+      180deg,
+      #21134d,
+      #b6415b 45%,
+      #f19a4b 75%,
+      #241329
+    );
+}
+
+/* 🌌 NUIT */
+
+body.environment-night {
+  background:
+    radial-gradient(circle at 50% 15%, #283b78, #080d28 55%, #010207);
+}
+
+/* 🔥 FINAL */
+
+body.environment-fire {
+  background:
+    radial-gradient(circle at 50% 30%, #7c2412, #250806 55%, #030101);
+}
+
+
+/* =========================
+   ❄️ PARTICULES MÉTÉO
+========================= */
+
+#weatherLayer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.weather-particle {
+  position: absolute;
+  top: -20px;
+  pointer-events: none;
+}
+
+/* Neige */
+
+.snow-particle {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+
+  animation: snowFall linear infinite;
+}
+
+@keyframes snowFall {
+  from {
+    transform: translateY(-20px) translateX(0);
+  }
+
+  to {
+    transform: translateY(110vh) translateX(80px);
+  }
+}
+
+/* Pluie */
+
+.rain-particle {
+  width: 2px;
+  height: 18px;
+  background: rgba(120,200,255,0.7);
+
+  animation: rainFall linear infinite;
+}
+
+@keyframes rainFall {
+  from {
+    transform: translateY(-30px);
+  }
+
+  to {
+    transform: translateY(110vh);
+  }
+}
