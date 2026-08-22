@@ -422,9 +422,11 @@ function winRound() {
     return;
   }
 
-  saveGame();
-  updateUI();
+  level++;
 
+saveGame();
+updateUI();
+updateEnvironment();
   if (get("msg")) {
     get("msg").textContent = t("win");
   }
