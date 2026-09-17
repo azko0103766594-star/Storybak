@@ -187,25 +187,6 @@ function setLanguage(newLang) {
   localStorage.setItem("lang", lang);
   updateUI();
 }
-
-/* =========================
-   🎮 PLAYGAMA BRIDGE
-========================= */
-
-let playgamaReady = false;
-
-async function initPlaygama() {
-  try {
-    await bridge.initialize();
-    playgamaReady = true;
-    console.log("✅ Playgama Bridge initialisé");
-  } catch (error) {
-    console.error("❌ Erreur Playgama Bridge :", error);
-  }
-}
-
-initPlaygama();
-
 /* =========================
    INIT
 ========================= */
